@@ -15,10 +15,11 @@
     "chalk": "^2.4.2",
     "firebase-admin": "^8.7.0",
     "js-levenshtein": "^1.1.6",
+    "line-reader": "^0.4.0",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
-    "performance-now": "^2.1.0",
-    "pubsub-js": "^1.7.0",
+    "nconf": "^0.10.0",
+    "node-fetch": "^2.6.0",
     "yargs": "^14.0.0"
   },
   "devDependencies": {},
