@@ -1,0 +1,24 @@
+{
+    "notificationType": "Message",
+    "projectKey": "avalara-tax",
+    "id": "0493995c-ca02-430d-97aa-fab912b98537",
+    "version": 1,
+    "sequenceNumber": 5,
+    "resource": {
+        "typeId": "customer",
+        "id": "03fa13b3-edfb-4e18-b655-d7774bc1ab9e"
+    },
+    "resourceVersion": 5,
+    "resourceUserProvidedIdentifiers": {},
+    "type": "CustomerAddressChanged",
+    "address": {
+        "id": "AwNywAsw",
+        "streetName": "main",
+        "streetNumber": "1001",
+        "city": "irvine",
+        "state": "CA",
+        "country": "US"
+    },
+    "createdAt": "2019-10-17T17:15:41.451Z",
+    "lastModifiedAt": "2019-10-17T17:15:41.451Z"
+}

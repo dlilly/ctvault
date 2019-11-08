@@ -1,0 +1,30 @@
+{
+  "name": "ctvault",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "@commercetools/api-request-builder": "^5.4.0",
+    "@commercetools/sdk-client": "^2.1.1",
+    "@commercetools/sdk-middleware-auth": "^5.1.4",
+    "@commercetools/sdk-middleware-http": "^5.2.2",
+    "@google-cloud/firestore": "^2.3.0",
+    "chalk": "^2.4.2",
+    "firebase-admin": "^8.7.0",
+    "js-levenshtein": "^1.1.6",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "performance-now": "^2.1.0",
+    "pubsub-js": "^1.7.0",
+    "yargs": "^14.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

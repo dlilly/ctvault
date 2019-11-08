@@ -1,0 +1,13 @@
+{
+    "notificationType": "ResourceCreated",
+    "projectKey": "rue21-demo",
+    "resource": {
+      "typeId": "customer",
+      "id": "c6314bab-75e0-4e46-957f-17a1010b45ee"
+    },
+    "resourceUserProvidedIdentifiers": {
+      "customerNumber": "12346"
+    },
+    "version": 1,
+    "modifiedAt": "2019-09-18T16:29:05.731Z"
+  }

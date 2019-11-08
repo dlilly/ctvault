@@ -1,0 +1,270 @@
+{
+    "action": "Update",
+    "resource": {
+      "typeId": "order",
+      "id": "1b009980-4a5d-4b15-8b11-8421789cff5d",
+      "obj": {
+        "type": "Order",
+        "id": "1b009980-4a5d-4b15-8b11-8421789cff5d",
+        "version": 2,
+        "lastMessageSequenceNumber": 2,
+        "createdAt": "2019-10-15T14:42:26.516Z",
+        "lastModifiedAt": "2019-10-15T14:42:26.516Z",
+        "lastModifiedBy": {
+          "isPlatformClient": true,
+          "user": {
+            "typeId": "user",
+            "id": "6200267d-2f72-4203-9106-1c824bf8e725"
+          }
+        },
+        "createdBy": {
+          "isPlatformClient": true,
+          "user": {
+            "typeId": "user",
+            "id": "6200267d-2f72-4203-9106-1c824bf8e725"
+          }
+        },
+        "orderNumber": "VS2WOZMY",
+        "customerId": "980ff7a9-ac42-4c2f-951f-1024af2fb94f",
+        "customerEmail": "ellen.thomas@example.com",
+        "totalPrice": {
+          "type": "centPrecision",
+          "currencyCode": "USD",
+          "centAmount": 10300,
+          "fractionDigits": 2
+        },
+        "taxedPrice": {
+          "totalNet": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 10300,
+            "fractionDigits": 2
+          },
+          "totalGross": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 10300,
+            "fractionDigits": 2
+          },
+          "taxPortions": [
+            {
+              "rate": 0,
+              "amount": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 0,
+                "fractionDigits": 2
+              },
+              "name": "Tax Exempt"
+            },
+            {
+              "rate": 0,
+              "amount": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 0,
+                "fractionDigits": 2
+              },
+              "name": "Avalara"
+            }
+          ]
+        },
+        "orderState": "Open",
+        "syncInfo": [],
+        "returnInfo": [
+          {
+            "items": [
+              {
+                "type": "LineItemReturnItem",
+                "id": "b772a63a-7323-4a20-ad2d-5dcefa53d98f",
+                "quantity": 1,
+                "lineItemId": "8c65c3e9-45d1-42b6-9c1b-5227133a834d",
+                "shipmentState": "Returned",
+                "paymentState": "Initial",
+                "lastModifiedAt": "2019-10-15T17:54:50.273Z",
+                "createdAt": "2019-10-15T17:54:50.273Z"
+              }
+            ]
+          }
+        ],
+        "shippingInfo": {
+          "shippingMethodName": "Standard US",
+          "price": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 300,
+            "fractionDigits": 2
+          },
+          "shippingRate": {
+            "price": {
+              "type": "centPrecision",
+              "currencyCode": "USD",
+              "centAmount": 300,
+              "fractionDigits": 2
+            },
+            "freeAbove": {
+              "type": "centPrecision",
+              "currencyCode": "USD",
+              "centAmount": 20000,
+              "fractionDigits": 2
+            },
+            "tiers": []
+          },
+          "taxRate": {
+            "name": "Avalara",
+            "amount": 0,
+            "includedInPrice": false,
+            "country": "US",
+            "subRates": []
+          },
+          "deliveries": [],
+          "shippingMethod": {
+            "typeId": "shipping-method",
+            "id": "cd6ac489-6224-4a2f-8d95-97fd27261fa7"
+          },
+          "taxedPrice": {
+            "totalNet": {
+              "type": "centPrecision",
+              "currencyCode": "USD",
+              "centAmount": 300,
+              "fractionDigits": 2
+            },
+            "totalGross": {
+              "type": "centPrecision",
+              "currencyCode": "USD",
+              "centAmount": 300,
+              "fractionDigits": 2
+            }
+          },
+          "shippingMethodState": "MatchesCart"
+        },
+        "taxMode": "External",
+        "inventoryMode": "None",
+        "taxRoundingMode": "HalfEven",
+        "taxCalculationMode": "LineItemLevel",
+        "origin": "Merchant",
+        "lineItems": [
+          {
+            "id": "8c65c3e9-45d1-42b6-9c1b-5227133a834d",
+            "productId": "2ca0cf32-bad5-4ae9-a37c-79f2bdab1f37",
+            "name": {
+              "en": "shirt"
+            },
+            "productType": {
+              "typeId": "product-type",
+              "id": "ea74de93-21e3-49f4-b5b4-7212c1853a1e",
+              "version": 1
+            },
+            "productSlug": {
+              "en": "shirt"
+            },
+            "variant": {
+              "id": 1,
+              "sku": "shirt",
+              "key": "shirt",
+              "prices": [
+                {
+                  "value": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 10000,
+                    "fractionDigits": 2
+                  },
+                  "id": "7e9f7915-e469-4c02-9eb5-dcdff8e845dd"
+                }
+              ],
+              "images": [],
+              "attributes": [
+                {
+                  "name": "TaxCode",
+                  "value": "P0000000"
+                }
+              ],
+              "assets": []
+            },
+            "price": {
+              "value": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 10000,
+                "fractionDigits": 2
+              },
+              "id": "7e9f7915-e469-4c02-9eb5-dcdff8e845dd"
+            },
+            "quantity": 1,
+            "discountedPricePerQuantity": [],
+            "taxRate": {
+              "name": "Avalara",
+              "amount": 0,
+              "includedInPrice": false,
+              "country": "US",
+              "subRates": [
+                {
+                  "name": "Tax Exempt",
+                  "amount": 0
+                }
+              ]
+            },
+            "state": [
+              {
+                "quantity": 1,
+                "state": {
+                  "typeId": "state",
+                  "id": "021337df-bbff-4c2b-8503-00ef4c236453"
+                }
+              }
+            ],
+            "priceMode": "Platform",
+            "totalPrice": {
+              "type": "centPrecision",
+              "currencyCode": "USD",
+              "centAmount": 10000,
+              "fractionDigits": 2
+            },
+            "taxedPrice": {
+              "totalNet": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 10000,
+                "fractionDigits": 2
+              },
+              "totalGross": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 10000,
+                "fractionDigits": 2
+              }
+            },
+            "lineItemMode": "Standard"
+          }
+        ],
+        "customLineItems": [],
+        "transactionFee": true,
+        "discountCodes": [],
+        "cart": {
+          "typeId": "cart",
+          "id": "2bcddb10-72b7-4d64-b50a-b6441340209d"
+        },
+        "shippingAddress": {
+          "id": "BUZpxkvl",
+          "streetName": "Pennsylvania Ave NW",
+          "streetNumber": "1603",
+          "postalCode": "20500",
+          "city": "Washington",
+          "region": "DC",
+          "country": "US"
+        },
+        "billingAddress": {
+          "id": "BUZpxkvl",
+          "streetName": "Pennsylvania Ave NW",
+          "streetNumber": "1603",
+          "postalCode": "20500",
+          "city": "Washington",
+          "region": "DC",
+          "country": "US"
+        },
+        "itemShippingAddresses": [],
+        "refusedGifts": []
+      }
+    }
+  }

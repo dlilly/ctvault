@@ -1,0 +1,169 @@
+{
+    "action": "Create",
+    "resource": {
+      "typeId": "order",
+      "id": "0463dd52-7b6f-40e6-b766-9c8445b5ab50",
+      "obj": {
+        "type": "Order",
+        "id": "0463dd52-7b6f-40e6-b766-9c8445b5ab50",
+        "version": 1,
+        "lastMessageSequenceNumber": 1,
+        "createdAt": "2019-09-12T18:46:26.680Z",
+        "lastModifiedAt": "2019-09-12T18:46:26.680Z",
+        "lastModifiedBy": {
+          "clientId": "mSDWSf2uzE-D3yYUuLDoTjDW",
+          "isPlatformClient": false
+        },
+        "createdBy": {
+          "clientId": "mSDWSf2uzE-D3yYUuLDoTjDW",
+          "isPlatformClient": false
+        },
+        "totalPrice": {
+          "type": "centPrecision",
+          "currencyCode": "USD",
+          "centAmount": 1000,
+          "fractionDigits": 2
+        },
+        "taxedPrice": {
+          "totalNet": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 1000,
+            "fractionDigits": 2
+          },
+          "totalGross": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 1075,
+            "fractionDigits": 2
+          },
+          "taxPortions": [
+            {
+              "rate": 0.075,
+              "amount": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 75,
+                "fractionDigits": 2
+              },
+              "name": "nc"
+            }
+          ]
+        },
+        "orderState": "Open",
+        "syncInfo": [],
+        "returnInfo": [],
+        "taxMode": "Platform",
+        "inventoryMode": "None",
+        "taxRoundingMode": "HalfEven",
+        "taxCalculationMode": "LineItemLevel",
+        "origin": "Customer",
+        "lineItems": [
+          {
+            "id": "9df33c00-abf9-4a57-a8df-5c9ae562bc47",
+            "productId": "a19339c8-ad17-41d2-a7c2-3c7926b46767",
+            "name": {
+              "de-DE": "CoolBox",
+              "en-US": "CoolBox"
+            },
+            "productType": {
+              "typeId": "product-type",
+              "id": "667d2ea3-197d-4288-a7dd-43b8fc0bd7d9",
+              "version": 1
+            },
+            "productSlug": {
+              "de-DE": "coolbox",
+              "en-US": "coolbox"
+            },
+            "variant": {
+              "id": 1,
+              "sku": "1234",
+              "key": "1234",
+              "prices": [
+                {
+                  "value": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 1000,
+                    "fractionDigits": 2
+                  },
+                  "id": "1a72a3d2-803c-4a37-b074-8ff5491c452f"
+                }
+              ],
+              "images": [],
+              "attributes": [],
+              "assets": []
+            },
+            "price": {
+              "value": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 1000,
+                "fractionDigits": 2
+              },
+              "id": "1a72a3d2-803c-4a37-b074-8ff5491c452f"
+            },
+            "quantity": 1,
+            "discountedPricePerQuantity": [],
+            "taxRate": {
+              "name": "nc",
+              "amount": 0.075,
+              "includedInPrice": false,
+              "country": "US",
+              "state": "NC",
+              "id": "9t2xIgiC",
+              "subRates": []
+            },
+            "state": [
+              {
+                "quantity": 1,
+                "state": {
+                  "typeId": "state",
+                  "id": "534434ec-faec-4d1a-b92e-f14f31c2edaf"
+                }
+              }
+            ],
+            "priceMode": "Platform",
+            "totalPrice": {
+              "type": "centPrecision",
+              "currencyCode": "USD",
+              "centAmount": 1000,
+              "fractionDigits": 2
+            },
+            "taxedPrice": {
+              "totalNet": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 1000,
+                "fractionDigits": 2
+              },
+              "totalGross": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 1075,
+                "fractionDigits": 2
+              }
+            },
+            "lineItemMode": "Standard"
+          }
+        ],
+        "customLineItems": [],
+        "transactionFee": true,
+        "discountCodes": [],
+        "cart": {
+          "typeId": "cart",
+          "id": "f8d13d0d-1b24-4a24-9a88-a7d4a55210f4"
+        },
+        "shippingAddress": {
+          "streetName": "Blackwell Street",
+          "streetNumber": "318",
+          "postalCode": "27701",
+          "city": "Durham",
+          "state": "NC",
+          "country": "US"
+        },
+        "itemShippingAddresses": [],
+        "refusedGifts": []
+      }
+    }
+  }

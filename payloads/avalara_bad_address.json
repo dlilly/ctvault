@@ -1,0 +1,37 @@
+{
+    "address": {
+      "line1": "1605 Pennsylvania Ave NW",
+      "city": "Washington",
+      "region": "DC",
+      "country": "US",
+      "postalCode": "20500"
+    },
+    "validatedAddresses": [
+      {
+        "addressType": "UnknownAddressType",
+        "line1": "1605 Pennsylvania Ave NW",
+        "line2": "",
+        "line3": "",
+        "city": "Washington",
+        "region": "DC",
+        "country": "US",
+        "postalCode": "20500",
+        "latitude": 38.898669,
+        "longitude": -77.036524
+      }
+    ],
+    "coordinates": {
+      "latitude": 38.898669,
+      "longitude": -77.036524
+    },
+    "resolutionQuality": "NotCoded",
+    "messages": [
+      {
+        "summary": "The address number is out of range",
+        "details": "The address was found but the street number in the input address was not between the low and high range of the post office database.",
+        "refersTo": "Address.Line0",
+        "severity": "Error",
+        "source": "Avalara.AvaTax.Services.Address"
+      }
+    ]
+  }

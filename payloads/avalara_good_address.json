@@ -1,0 +1,41 @@
+{
+    "address": {
+        "line1": "16928 Mouse Trap Dr",
+        "city": "Round Rock",
+        "region": "TX",
+        "country": "US",
+        "postalCode": "78681"
+    },
+    "validatedAddresses": [
+        {
+            "addressType": "StreetOrResidentialAddress",
+            "line1": "16928 MOUSE TRAP DR",
+            "line2": "",
+            "line3": "",
+            "city": "ROUND ROCK",
+            "region": "TX",
+            "country": "US",
+            "postalCode": "78681-5409",
+            "latitude": 30.508061,
+            "longitude": -97.735274
+        }
+    ],
+    "coordinates": {
+        "latitude": 30.508061,
+        "longitude": -97.735274
+    },
+    "resolutionQuality": "Intersection",
+    "taxAuthorities": [
+        {
+            "avalaraId": "55",
+            "jurisdictionName": "TEXAS",
+            "jurisdictionType": "State",
+            "signatureCode": "BQAR"
+        }, {
+            "avalaraId": "2001072364",
+            "jurisdictionName": "WILLIAMSON",
+            "jurisdictionType": "County",
+            "signatureCode": "MWVR"
+        }
+    ]
+}

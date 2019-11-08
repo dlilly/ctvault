@@ -1,0 +1,199 @@
+{
+    "type": "Cart",
+    "id": "9c7da3a7-5bbf-493b-876c-d120aedc364d",
+    "version": 4,
+    "createdAt": "2019-09-13T14:42:17.861Z",
+    "lastModifiedAt": "2019-09-13T14:42:17.861Z",
+    "lastModifiedBy": {
+      "isPlatformClient": true,
+      "user": {
+        "typeId": "user",
+        "id": "6200267d-2f72-4203-9106-1c824bf8e725"
+      }
+    },
+    "createdBy": {
+      "isPlatformClient": true,
+      "user": {
+        "typeId": "user",
+        "id": "6200267d-2f72-4203-9106-1c824bf8e725"
+      }
+    },
+    "customerId": "cc99d010-2368-4feb-b3ca-e69d0515c553",
+    "customerEmail": "chris.whatmough@email.com",
+    "lineItems": [
+      {
+        "id": "ad59282d-78db-42a6-827d-fb8c9baaa134",
+        "productId": "a21406aa-a342-4998-a7e6-4d4cfee7f43f",
+        "name": {
+          "en-US": "VIZIO 36\" 2.1 Sound Bar System"
+        },
+        "productType": {
+          "typeId": "product-type",
+          "id": "6372e318-4e54-4b63-9b0a-2cf367a42dbc",
+          "version": 5
+        },
+        "productSlug": {
+          "en-US": "vizio-36-21-sound-bar-system"
+        },
+        "variant": {
+          "id": 1,
+          "sku": "SB3621n-G8",
+          "key": "SB3621n-G8",
+          "prices": [
+            {
+              "value": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 14999,
+                "fractionDigits": 2
+              },
+              "id": "b0cabebf-9800-491f-bde3-767da5131bc4"
+            }
+          ],
+          "images": [
+            {
+              "url": "https://cdn-ssl.vizio.com/media/catalog/product/cache/1/image/900x654/602f0fa2c1f0d1ba5e241f914e856ff9/r/s/rs13485_2019_sb3621n-g8_hero_flat-sub_right-angle.jpg",
+              "dimensions": {
+                "w": 900,
+                "h": 654
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "packaging-width",
+              "value": 978.9
+            },
+            {
+              "name": "packaging-height",
+              "value": 147.1
+            },
+            {
+              "name": "packaging-depth",
+              "value": 514.1
+            },
+            {
+              "name": "packaging-weight",
+              "value": 9.33
+            }
+          ],
+          "assets": []
+        },
+        "price": {
+          "value": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 14999,
+            "fractionDigits": 2
+          },
+          "id": "b0cabebf-9800-491f-bde3-767da5131bc4"
+        },
+        "quantity": 1,
+        "discountedPricePerQuantity": [],
+        "taxRate": {
+          "name": "standard",
+          "amount": 0.0825,
+          "includedInPrice": false,
+          "country": "US",
+          "id": "Jp4YWYZu",
+          "subRates": []
+        },
+        "state": [
+          {
+            "quantity": 1,
+            "state": {
+              "typeId": "state",
+              "id": "534434ec-faec-4d1a-b92e-f14f31c2edaf"
+            }
+          }
+        ],
+        "priceMode": "Platform",
+        "totalPrice": {
+          "type": "centPrecision",
+          "currencyCode": "USD",
+          "centAmount": 14999,
+          "fractionDigits": 2
+        },
+        "taxedPrice": {
+          "totalNet": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 14999,
+            "fractionDigits": 2
+          },
+          "totalGross": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 16236,
+            "fractionDigits": 2
+          }
+        },
+        "lineItemMode": "Standard"
+      }
+    ],
+    "cartState": "Active",
+    "totalPrice": {
+      "type": "centPrecision",
+      "currencyCode": "USD",
+      "centAmount": 14999,
+      "fractionDigits": 2
+    },
+    "taxedPrice": {
+      "totalNet": {
+        "type": "centPrecision",
+        "currencyCode": "USD",
+        "centAmount": 14999,
+        "fractionDigits": 2
+      },
+      "totalGross": {
+        "type": "centPrecision",
+        "currencyCode": "USD",
+        "centAmount": 16236,
+        "fractionDigits": 2
+      },
+      "taxPortions": [
+        {
+          "rate": 0.0825,
+          "amount": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 1237,
+            "fractionDigits": 2
+          },
+          "name": "standard"
+        }
+      ]
+    },
+    "customLineItems": [],
+    "discountCodes": [],
+    "inventoryMode": "None",
+    "taxMode": "Platform",
+    "taxRoundingMode": "HalfEven",
+    "taxCalculationMode": "LineItemLevel",
+    "deleteDaysAfterLastModification": 1,
+    "refusedGifts": [],
+    "origin": "Merchant",
+    "shippingAddress": {
+      "id": "_mYDSZuH",
+      "firstName": "Chris",
+      "lastName": "Whatmough",
+      "streetName": "Presidential Boulevard",
+      "streetNumber": "3600",
+      "postalCode": "78719",
+      "city": "Austin",
+      "region": "TX",
+      "country": "US"
+    },
+    "billingAddress": {
+      "id": "_mYDSZuH",
+      "firstName": "Chris",
+      "lastName": "Whatmough",
+      "streetName": "Presidential Boulevard",
+      "streetNumber": "3600",
+      "postalCode": "78719",
+      "city": "Austin",
+      "region": "TX",
+      "country": "US"
+    },
+    "itemShippingAddresses": []
+  }

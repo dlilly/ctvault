@@ -1,0 +1,55 @@
+{
+    "action": "Update",
+    "resource": {
+      "typeId": "customer",
+      "id": "e81987cc-3cd1-4f36-b9b2-4c8214e805c2",
+      "obj": {
+        "id": "e81987cc-3cd1-4f36-b9b2-4c8214e805c2",
+        "version": 4,
+        "lastMessageSequenceNumber": 1,
+        "createdAt": "2019-10-11T16:23:08.409Z",
+        "lastModifiedAt": "2019-10-11T16:23:08.409Z",
+        "lastModifiedBy": {
+          "clientId": "H4zYsK_yRLcF1dbdY8IiuhMf",
+          "isPlatformClient": false
+        },
+        "createdBy": {
+          "clientId": "H4zYsK_yRLcF1dbdY8IiuhMf",
+          "isPlatformClient": false
+        },
+        "customerNumber": "10001",
+        "email": "tom.gaines@example.com",
+        "firstName": "Tom",
+        "lastName": "Gaines",
+        "middleName": "T",
+        "title": "",
+        "salutation": "",
+        "password": "I6WJBm4Aruzn5dmK4WlFuhgjgaVwG+AZEnlYPKylaCE=$7OKf0rWJXZIbdK+ya2fUCW1l7KZG7hzs/INmqvFbAXo=",
+        "addresses": [
+          {
+            "id": "R0j8jRYP",
+            "streetName": "Pennsylvania Ave NW",
+            "streetNumber": "1602",
+            "postalCode": "20500",
+            "city": "Washington",
+            "region": "DC",
+            "state": "DC",
+            "country": "US"
+          }
+        ],
+        "shippingAddressIds": [],
+        "billingAddressIds": [],
+        "isEmailVerified": false,
+        "custom": {
+          "type": {
+            "typeId": "type",
+            "id": "9179de3a-fffd-4a33-85bd-1898a3dcf2e5"
+          },
+          "fields": {
+            "tax-exempt": false
+          }
+        },
+        "stores": []
+      }
+    }
+  }
