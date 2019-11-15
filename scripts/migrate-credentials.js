@@ -4,7 +4,7 @@ const admin = require('firebase-admin');
 
 let run = async() => {
     let ctclient = await CT.getClient('us-demo-infra')
-    let creds = _.first(await ctclient.customObjects.get("config", "credentials")).value
+    let creds = _.first(await ctclient.customObjects.get({ container: "config", key: "credentials" })).value
 
     let serviceAccount = require('/opt/googlecreds.json');
 
