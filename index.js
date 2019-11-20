@@ -21,6 +21,7 @@ let ensureVault = async () => {
             await vault.init()
         } catch (error) {
             logger.error(`Error creating vault with type [ ${vaultConfig.type} ]: ${error}`)
+            logger.error(error.stack)
         }
     }
 
