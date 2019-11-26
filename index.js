@@ -1,3 +1,5 @@
+const _ = require('lodash')
+
 // local libs
 const config = require('./lib/config')
 const logger = require('./lib/logger')
@@ -33,19 +35,21 @@ let getProjectKey = (projectKey) => {
     let pk = projectKey || config.get('project')
 
     if (!pk) {
-        console.error(`Usage error: please specify project key with --project=<project>`)
-        process.exit(0)
+        throw new Error(`Usage error: please specify project key with --project=<project>`)
     }
 
     return pk
 }
 
 module.exports = {
-    getClient: async projectKey => (await ensureVault()).getClient(getProjectKey(projectKey)),
+    getClient: async projectKey => {
+        let vault = await ensureVault()
+        return vault.getClient(getProjectKey(projectKey))
+    },
     getClients: async () => (await ensureVault()).getClients(),
 
     saveCredential: credential => {},
     deleteCredential: credential => {},
 
-    actions: require('./lib/actions')
+    // actions: require('./lib/actions')
 }
