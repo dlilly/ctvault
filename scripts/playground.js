@@ -1,24 +1,10 @@
 const CT = require('..')
 
-let standa = {
-  "name": "standa",
-  "description": "foods",
-  "rates": [
-      {
-          "name": "10% incl.",
-          "amount": 0.1,
-          "includedInPrice": true,
-          "country": "US"
-      }
-  ],
-  "key": "standa"
-}
-
 let run = async() => {
   try {
     const ct = await CT.getClient()
-    let custom = await ct.taxCategories.update(standa)
-    console.log(`custom ${JSON.stringify(custom)}`)      
+    let products = await ct.products.get()
+    console.log(`custom ${JSON.stringify(products)}`)      
   } catch (error) {
     console.error(error)
   } finally {
