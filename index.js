@@ -42,15 +42,12 @@ let getProjectKey = (projectKey) => {
 }
 
 module.exports = {
-    ensureVault,
-    getClient: async projectKey => {
-        let vault = await ensureVault()
-        return vault.getClient(getProjectKey(projectKey))
-    },
+    hasClient: async projectKey => (await ensureVault()).hasClient(getProjectKey(projectKey)),
+    getClient: async projectKey => (await ensureVault()).getClient(getProjectKey(projectKey)),
     getClients: async () => (await ensureVault()).getClients(),
 
-    saveCredential: credential => {},
-    deleteCredential: credential => {},
+    saveCredential: async credential => (await ensureVault()).saveCredential(credential),
+    deleteCredential: async credential => (await ensureVault()).deleteCredential(credential),
 
     // actions: require('./lib/actions')
 }
