@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const fs = require('fs-extra')
 
 // local libs
 const config = require('./lib/config')
@@ -15,7 +16,7 @@ let ensureVault = async () => {
     }
 
     if (!vault) {
-        const vaultConfig = require(vaultConfigPath)
+        const vaultConfig = fs.readJSONSync(vaultConfigPath)
 
         try {
             const Vault = require(`./lib/vault/${vaultConfig.type}`)
