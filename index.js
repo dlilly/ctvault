@@ -48,7 +48,5 @@ module.exports = {
     getClients: async () => (await ensureVault()).getClients(),
 
     saveCredential: async credential => (await ensureVault()).saveCredential(credential),
-    deleteCredential: async credential => (await ensureVault()).deleteCredential(credential),
-
-    // actions: require('./lib/actions')
+    deleteCredential: async credential => (await ensureVault()).deleteCredential(credential)
 }
