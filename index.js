@@ -42,6 +42,7 @@ let getProjectKey = (projectKey) => {
     return pk
 }
 
+ensureVault()
 module.exports = {
     hasClient: async projectKey => (await ensureVault()).hasClient(getProjectKey(projectKey)),
     getClient: async projectKey => (await ensureVault()).getClient(getProjectKey(projectKey)),
