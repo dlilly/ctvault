@@ -42,12 +42,33 @@ let getProjectKey = (projectKey) => {
     return pk
 }
 
+let hasClient = async projectKey => (await ensureVault()).hasClient(getProjectKey(projectKey))
+let getClient = async projectKey => (await ensureVault()).getClient(getProjectKey(projectKey))
+let getClients = async () => (await ensureVault()).getClients()
+
 ensureVault()
 module.exports = {
-    hasClient: async projectKey => (await ensureVault()).hasClient(getProjectKey(projectKey)),
-    getClient: async projectKey => (await ensureVault()).getClient(getProjectKey(projectKey)),
-    getClients: async () => (await ensureVault()).getClients(),
+    hasClient,
+    getClient,
+    getClients,
 
     saveCredential: async credential => (await ensureVault()).saveCredential(credential),
-    deleteCredential: async credential => (await ensureVault()).deleteCredential(credential)
+    deleteCredential: async credential => (await ensureVault()).deleteCredential(credential),
+
+    middleware: {
+        headers: async (req, res, next) => {
+            let projectKey = req.headers['authorization'] || req.body.projectKey
+            req.ct = projectKey && await getClient(projectKey)
+        
+            req.data = { 
+                params: {
+                    ...req.query,
+                    ...req.params
+                },
+                object: req.body.resource && req.body.resource.obj || req.body
+            }
+        
+            next()
+        }
+    }
 }
