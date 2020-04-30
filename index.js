@@ -7,6 +7,9 @@ const logger = require('./lib/logger')
 global.logger = global.logger || logger
 
 let vault = null
+let ensuringVault = false
+
+const sleep = (milliseconds) => new Promise(resolve => setTimeout(resolve, milliseconds))
 
 let ensureVault = async () => {
     const vaultConfigPath = config.get('CT_VAULT_CONFIG')
@@ -15,17 +18,23 @@ let ensureVault = async () => {
         process.exit(0)
     }
 
+    while (ensuringVault) {
+        await sleep(100)
+    }
+
     if (!vault) {
+        ensuringVault = true
         const vaultConfig = fs.readJSONSync(vaultConfigPath)
 
         try {
             const Vault = require(`./lib/vault/${vaultConfig.type}`)
             vault = new Vault(vaultConfig)
-            await vault.init()
+            await vault.init()    
         } catch (error) {
             logger.error(`Error creating vault with type [ ${vaultConfig.type} ]: ${error}`)
             logger.error(error.stack)
         }
+        ensuringVault = false
     }
 
     return vault
@@ -59,15 +68,15 @@ module.exports = {
         headers: async (req, res, next) => {
             let projectKey = req.headers['authorization'] || req.body.projectKey
             req.ct = projectKey && await getClient(projectKey)
-        
-            req.data = { 
+
+            req.data = {
                 params: {
                     ...req.query,
                     ...req.params
                 },
                 object: req.body.resource && req.body.resource.obj || req.body
             }
-        
+
             next()
         }
     }

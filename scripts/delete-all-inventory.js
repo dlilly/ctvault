@@ -8,9 +8,9 @@ let run = async () => {
     await sleep(1000)
     try {
         const ct = await CT.getClient()
-        await ct.channels.process(async channel => {
-            log(`Deleting channel [ ${channel.key} ]...`)
-            await ct.channels.delete(channel)
+        await ct.inventory.process(async inv => {
+            log(`Deleting inventory entry [ ${inv.sku} ]...`)
+            await ct.inventory.delete(inv)
             await sleep(200)
         })
     } catch (error) {

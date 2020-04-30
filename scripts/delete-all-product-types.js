@@ -1,29 +1,21 @@
 const _ = require('lodash')
-const { getClient, getService } = require('../lib/ctclient');
+const log = require('single-line-log').stdout
 
-let client = getClient()
-let productTypesService = getService().productTypes
+const CT = require('..')
 
-let productTypesRequest = {
-    uri: productTypesService.build(),
-    method: 'GET'
-}
-
-let deleteProductType = async productType => {
-    console.log(`deleting productType [ ${productType.id} ]...`)
-
-    let deleteProductTypeRequest = {
-        uri: productTypesService.byId(productType.id).withVersion(productType.version).build(),
-        method: 'DELETE'
-    }
-
-    return await client.execute(deleteProductTypeRequest)
-}
-
-let processProductType = async payload => _.each(payload.body.results, deleteProductType)
-
+let sleep = async(ms) => { return new Promise(resolve => setTimeout(resolve, ms)); }
 let run = async () => {
-    await client.process(productTypesRequest, processProductType)
+    await sleep(1000)
+    try {
+        const ct = await CT.getClient()
+        await ct.productTypes.process(async prodType => {
+            log(`Deleting product type [ ${prodType.key} ]...`)
+            await ct.productTypes.delete(prodType)
+            await sleep(200)
+        })
+    } catch (error) {
+        console.error(`Error: ${error}`)
+    }
 }
 
 run()
