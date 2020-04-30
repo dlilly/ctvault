@@ -79,9 +79,5 @@ module.exports = {
 
             next()
         }
-    },
-
-    install: (Vue, options) => {
-        Vue.getCTClient = getClient
     }
 }
