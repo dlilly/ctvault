@@ -12,6 +12,7 @@
     "@commercetools/sdk-middleware-auth": "^5.1.7",
     "@commercetools/sdk-middleware-http": "^5.3.1",
     "@firebase/app": "^0.5.6",
+    "@grpc/grpc-js": "git://github.com/dlilly/grpc-js-patch.git",
     "chalk": "^2.4.2",
     "fast-crc32c": "^2.0.0",
     "firebase-admin": "^8.7.0",
