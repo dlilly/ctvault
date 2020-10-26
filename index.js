@@ -30,7 +30,8 @@ let ensureVault = async () => {
             const Vault = require(`./lib/vault/${vaultConfig.type}`)
             vault = new Vault(vaultConfig)
             await vault.init()    
-            logger.info(`CT vault created`)
+            let clients = await vault.getClients()
+            logger.info(`CT vault created with [ ${clients.length} ] projects`)
         } catch (error) {
             logger.error(`Error creating vault with type [ ${vaultConfig.type} ]: ${error}`)
             logger.error(error.stack)
