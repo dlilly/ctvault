@@ -13,6 +13,22 @@ let run = async() => {
     }))
     console.log(x)
 
+    let productType = await ct.productTypes.ensure({
+        key: 'test',
+        name: 'test',
+        description: 'test'
+    })
+
+    console.log(JSON.stringify(productType))
+
+    let deletedProductType = await productType.delete()
+
+    console.log(JSON.stringify(deletedProductType))
+
+    // let product = await ct.products.create({
+    //     name: ct.functions.localize('CoolBox')
+    // })
+
     // const serviceProductType = await ct.productTypes.ensure(constants.dataModel.serviceProductType)
 }
 run()
