@@ -27,12 +27,13 @@ let ensureVault = async () => {
     if (!vault) {
         ensuringVault = true
         const vaultConfig = fs.readJSONSync(vaultConfigPath)
+        console.log(vaultConfig)
 
         try {
             const Vault = require(`./lib/vault/${vaultConfig.type}`)
             vault = new Vault(vaultConfig)
             await vault.init()    
-            logger.info(`CT vault created`)
+            logger.info(`CT vault created with [ ${(await vault.getClients()).length} ] projects`)
         } catch (error) {
             logger.error(`Error creating vault with type [ ${vaultConfig.type} ]: ${error}`)
             logger.error(error.stack)
