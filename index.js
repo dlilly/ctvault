@@ -27,7 +27,6 @@ let ensureVault = async () => {
     if (!vault) {
         ensuringVault = true
         const vaultConfig = fs.readJSONSync(vaultConfigPath)
-        console.log(vaultConfig)
 
         try {
             const Vault = require(`./lib/vault/${vaultConfig.type}`)
