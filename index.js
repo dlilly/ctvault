@@ -11,7 +11,7 @@ let ensuringVault = false
 
 const sleep = (milliseconds) => new Promise(resolve => setTimeout(resolve, milliseconds))
 
-logger.info(`CTVault: ${process.env.npm_package_version}`)
+// logger.info(`CTVault: ${process.env.npm_package_version}`)
 
 let ensureVault = async () => {
     const vaultConfigPath = config.get('CT_VAULT_CONFIG')
