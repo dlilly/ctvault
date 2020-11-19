@@ -10,8 +10,7 @@ let run = async () => {
         const ct = await CT.getClient()
         await ct.customers.process(async cust => {
             log(`Deleting customer [ ${cust.firstName} ${cust.lastName} ]...`)
-            // await ct.customers.delete(cust)
-            await sleep(200)
+            return await cust.delete()
         })
     } catch (error) {
         console.error(`Error: ${error}`)
