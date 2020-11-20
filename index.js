@@ -3,18 +3,16 @@ const fs = require('fs-extra')
 
 // local libs
 const config = require('./lib/config')
-const logger = require('./lib/logger')
-global.logger = global.logger || logger
+global.logger = require('./lib/logger')
+const { sleep } = require('./lib/util')
 
 let vault = null
 let ensuringVault = false
 
-const sleep = (milliseconds) => new Promise(resolve => setTimeout(resolve, milliseconds))
-
 let ensureVault = async () => {
     const vaultConfigPath = config.get('CT_VAULT_CONFIG')
     if (!vaultConfigPath) {
-        console.error(`Error: CT_VAULT_CONFIG environment variable not set`)
+        logger.error(`Error: CT_VAULT_CONFIG environment variable not set`)
         process.exit(0)
     }
 
@@ -42,7 +40,7 @@ let ensureVault = async () => {
     return vault
 }
 
-let getProjectKey = (projectKey) => {
+let getProjectKey = projectKey => {
     // if we were passed in a project key on the command line (ie from a script) then use that
     let pk = projectKey || config.get('project')
 
