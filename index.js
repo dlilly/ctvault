@@ -13,7 +13,7 @@ let ensuringVault = false
 let ensureVault = async () => {
     const vaultConfigPath = config.get('CT_VAULT_CONFIG')
     if (!vaultConfigPath) {
-        logger.error(`Error: CT_VAULT_CONFIG environment variable not set`)
+        logger.debug(`CT_VAULT_CONFIG environment variable not set`)
         return
         // process.exit(0)
     }
