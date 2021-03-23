@@ -5,6 +5,7 @@ const fs = require('fs-extra')
 const config = require('./lib/config')
 global.logger = require('./lib/logger')
 const { sleep } = require('./lib/util')
+const factory = require('./lib/ct_factory')
 
 let vault = null
 let ensuringVault = false
@@ -13,7 +14,8 @@ let ensureVault = async () => {
     const vaultConfigPath = config.get('CT_VAULT_CONFIG')
     if (!vaultConfigPath) {
         logger.error(`Error: CT_VAULT_CONFIG environment variable not set`)
-        process.exit(0)
+        return
+        // process.exit(0)
     }
 
     while (ensuringVault) {
@@ -54,6 +56,7 @@ let getProjectKey = projectKey => {
 let hasClient = async projectKey => (await ensureVault()).hasClient(getProjectKey(projectKey))
 let getClient = async projectKey => (await ensureVault()).getClient(getProjectKey(projectKey))
 let getClients = async () => (await ensureVault()).getClients()
+let getClientFromConfig = async config => await factory.createCTPClient(config)
 
 ensureVault()
 
@@ -61,6 +64,7 @@ module.exports = {
     hasClient,
     getClient,
     getClients,
+    getClientFromConfig,
 
     saveCredential: async credential => (await ensureVault()).saveCredential(credential),
     deleteCredential: async credential => (await ensureVault()).deleteCredential(credential),
