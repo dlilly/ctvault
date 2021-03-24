@@ -56,7 +56,7 @@ let getProjectKey = projectKey => {
 let hasClient = async projectKey => (await ensureVault()).hasClient(getProjectKey(projectKey))
 let getClient = async projectKey => (await ensureVault()).getClient(getProjectKey(projectKey))
 let getClients = async () => (await ensureVault()).getClients()
-let getClientFromConfig = async config => await factory.createCTPClient(config)
+let getClientFromConfig = config => factory.createCTPClient(config)
 
 ensureVault()
 
